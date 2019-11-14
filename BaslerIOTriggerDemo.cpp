@@ -25,6 +25,7 @@ int main()
       camera.TriggerSource.SetValue(Basler_UsbCameraParams::TriggerSource_Line1);
       camera.TriggerActivation.SetValue(Basler_UsbCameraParams::TriggerActivation_RisingEdge);
       camera.TriggerDelay.SetValue(0.0); // unit is microseconds
+      camera.LineDebouncerTime.SetValue(10.0); // unit is microseconds
       camera.TriggerMode.SetValue(Basler_UsbCameraParams::TriggerMode_On);
 
       camera.StartGrabbing( 100);
